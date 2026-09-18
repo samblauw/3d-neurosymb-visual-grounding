@@ -1,0 +1,9 @@
+fine_tune_type: lora
+num_layers: -1
+lora_parameters:
+  rank: 16
+  scale: 2
+  dropout: 0.0
+learning_rate: 1.0e-5
+max_seq_length: 2048
+optimizer: adam

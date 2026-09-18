@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grounding"
+version = "0.1.0"
+description = "Symbolic 3D visual grounding on Nr3D: LLM parser, scene representation, resolver"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+# Install the extras for the workflow you need.
+dependencies = []
+
+[project.optional-dependencies]
+evaluation = [
+    "huggingface-hub==0.25.2",
+    "numpy==1.26.4",
+    "openai==1.60.0",
+    "opencv-python==4.10.0.84",
+    "pandas==2.2.3",
+    "Pillow",
+    "scikit-image==0.24.0",
+    "torch",
+    "torchvision",
+    "tqdm",
+    "transformers==4.17.0",
+]
+training = [
+    "mlx==0.31.2",
+    "mlx-lm==0.31.3",
+    "PyYAML==6.0.3",
+    "wandb==0.27.0",
+]
+test = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.setuptools.package-data]
+"grounding._vendor.lasp" = ["LICENSE"]

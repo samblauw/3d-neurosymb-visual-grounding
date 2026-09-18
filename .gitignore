@@ -1,0 +1,66 @@
+# Generated pipeline inputs and outputs
+/data/
+/artifacts/
+/runs/
+/vendor/scenes/
+/models/
+/scenes/
+/results/
+/tests/
+
+# Baseline compatibility data links
+/baselines/lasp/data
+/baselines/lasp/output
+/baselines/lasp/benchmark
+
+# Large generated files
+*.safetensors
+*.pt
+*.pth
+*.ply
+*.csv
+*.jsonl
+wandb/
+*.log
+
+# Historical and local output
+/archive/
+/logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Secrets and local editor state
+.env
+.env.*
+!.env.example
+*.token
+.vscode/
+.claude/
+.DS_Store
+.AppleDouble
+.LSOverride
+*.bak
+
+# Local working notes
+CLAUDE.md
+SESSION_NOTES.md
+docs/notes.md
+
+# Local environments
+env/
+.tox/
+.nox/
